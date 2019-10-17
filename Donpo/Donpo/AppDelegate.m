@@ -22,6 +22,13 @@
     UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
     navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
     splitViewController.delegate = self;
+
+    NSString *name = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"name"];
+
+    NSLog(@"name: %@", name);
+
+
+
     return YES;
 }
 

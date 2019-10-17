@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041E5AA813E8D9F98109ED08 /* libPods-Donpo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8565186D3C87FB2AD3C0C4 /* libPods-Donpo.a */; };
+		0C9F9413AE0487807FDF289D /* libPods-Donpo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8565186D3C87FB2AD3C0C4 /* libPods-Donpo.a */; };
+		25174F3A234EFB23000FB4BF /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253EF3C422EAC8DE00821F97 /* MasterViewController.m */; };
+		25174F3B234EFB23000FB4BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 253EF3C122EAC8DE00821F97 /* AppDelegate.m */; };
+		25174F3C234EFB23000FB4BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 253EF3D222EAC8DF00821F97 /* main.m */; };
+		25174F3D234EFB23000FB4BF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253EF3C722EAC8DE00821F97 /* DetailViewController.m */; };
+		25174F41234EFB23000FB4BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 253EF3CE22EAC8DF00821F97 /* LaunchScreen.storyboard */; };
+		25174F42234EFB23000FB4BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 253EF3CC22EAC8DF00821F97 /* Assets.xcassets */; };
+		25174F43234EFB23000FB4BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 253EF3C922EAC8DE00821F97 /* Main.storyboard */; };
+		25174F64234F1D24000FB4BF /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25174F4F234F1BBF000FB4BF /* ReplayKit.framework */; };
+		25174F68234F1D24000FB4BF /* SampleHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 25174F67234F1D24000FB4BF /* SampleHandler.m */; };
+		25174F6F234F1D24000FB4BF /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25174F4F234F1BBF000FB4BF /* ReplayKit.framework */; };
+		25174F70234F1D24000FB4BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25174F51234F1BBF000FB4BF /* UIKit.framework */; };
+		25174F74234F1D24000FB4BF /* BroadcastSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25174F73234F1D24000FB4BF /* BroadcastSetupViewController.m */; };
+		25174F78234F1D24000FB4BF /* PTLiveBroadcastSetupUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 25174F6E234F1D24000FB4BF /* PTLiveBroadcastSetupUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		25174F7B234F1D24000FB4BF /* PTLiveBroadcast.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 25174F63234F1D24000FB4BF /* PTLiveBroadcast.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		253EF3C222EAC8DE00821F97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 253EF3C122EAC8DE00821F97 /* AppDelegate.m */; };
 		253EF3C522EAC8DE00821F97 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253EF3C422EAC8DE00821F97 /* MasterViewController.m */; };
 		253EF3C822EAC8DE00821F97 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253EF3C722EAC8DE00821F97 /* DetailViewController.m */; };
@@ -16,7 +32,52 @@
 		253EF3D322EAC8DF00821F97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 253EF3D222EAC8DF00821F97 /* main.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		25174F76234F1D24000FB4BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 253EF3B522EAC8DE00821F97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 25174F6D234F1D24000FB4BF;
+			remoteInfo = PTLiveBroadcastSetupUI;
+		};
+		25174F79234F1D24000FB4BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 253EF3B522EAC8DE00821F97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 25174F62234F1D24000FB4BF;
+			remoteInfo = PTLiveBroadcast;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		25174F5E234F1BC0000FB4BF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				25174F7B234F1D24000FB4BF /* PTLiveBroadcast.appex in Embed App Extensions */,
+				25174F78234F1D24000FB4BF /* PTLiveBroadcastSetupUI.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		25174F47234EFB23000FB4BF /* Development.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Development.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		25174F48234EFB24000FB4BF /* Development-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Development-Info.plist"; path = "/Users/benwangliu/Practise/Donpo/Donpo/Development-Info.plist"; sourceTree = "<absolute>"; };
+		25174F49234EFFC6000FB4BF /* Development.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Development.entitlements; sourceTree = "<group>"; };
+		25174F4F234F1BBF000FB4BF /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		25174F51234F1BBF000FB4BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		25174F63234F1D24000FB4BF /* PTLiveBroadcast.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PTLiveBroadcast.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		25174F66234F1D24000FB4BF /* SampleHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleHandler.h; sourceTree = "<group>"; };
+		25174F67234F1D24000FB4BF /* SampleHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleHandler.m; sourceTree = "<group>"; };
+		25174F69234F1D24000FB4BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25174F6E234F1D24000FB4BF /* PTLiveBroadcastSetupUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PTLiveBroadcastSetupUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		25174F72234F1D24000FB4BF /* BroadcastSetupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BroadcastSetupViewController.h; sourceTree = "<group>"; };
+		25174F73234F1D24000FB4BF /* BroadcastSetupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BroadcastSetupViewController.m; sourceTree = "<group>"; };
+		25174F75234F1D24000FB4BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		253EF3BD22EAC8DE00821F97 /* Donpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Donpo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		253EF3C022EAC8DE00821F97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		253EF3C122EAC8DE00821F97 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,24 +90,80 @@
 		253EF3CF22EAC8DF00821F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		253EF3D122EAC8DF00821F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		253EF3D222EAC8DF00821F97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		25F61DB222EC431400A2C8E1 /* Donpo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Donpo.entitlements; sourceTree = "<group>"; };
+		2A8565186D3C87FB2AD3C0C4 /* libPods-Donpo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Donpo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7703D1FE8AD8B9F20F6681AC /* Pods-Donpo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donpo.debug.xcconfig"; path = "Target Support Files/Pods-Donpo/Pods-Donpo.debug.xcconfig"; sourceTree = "<group>"; };
+		F124629E1007F4FD1AEB47D1 /* Pods-Donpo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Donpo.release.xcconfig"; path = "Target Support Files/Pods-Donpo/Pods-Donpo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		253EF3BA22EAC8DE00821F97 /* Frameworks */ = {
+		25174F3E234EFB23000FB4BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		25174F60234F1D24000FB4BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25174F64234F1D24000FB4BF /* ReplayKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25174F6B234F1D24000FB4BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25174F6F234F1D24000FB4BF /* ReplayKit.framework in Frameworks */,
+				25174F70234F1D24000FB4BF /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		253EF3BA22EAC8DE00821F97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C9F9413AE0487807FDF289D /* libPods-Donpo.a in Frameworks */,
+				041E5AA813E8D9F98109ED08 /* libPods-Donpo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25174F65234F1D24000FB4BF /* PTLiveBroadcast */ = {
+			isa = PBXGroup;
+			children = (
+				25174F66234F1D24000FB4BF /* SampleHandler.h */,
+				25174F67234F1D24000FB4BF /* SampleHandler.m */,
+				25174F69234F1D24000FB4BF /* Info.plist */,
+			);
+			path = PTLiveBroadcast;
+			sourceTree = "<group>";
+		};
+		25174F71234F1D24000FB4BF /* PTLiveBroadcastSetupUI */ = {
+			isa = PBXGroup;
+			children = (
+				25174F72234F1D24000FB4BF /* BroadcastSetupViewController.h */,
+				25174F73234F1D24000FB4BF /* BroadcastSetupViewController.m */,
+				25174F75234F1D24000FB4BF /* Info.plist */,
+			);
+			path = PTLiveBroadcastSetupUI;
+			sourceTree = "<group>";
+		};
 		253EF3B422EAC8DE00821F97 = {
 			isa = PBXGroup;
 			children = (
+				25174F49234EFFC6000FB4BF /* Development.entitlements */,
 				253EF3BF22EAC8DE00821F97 /* Donpo */,
+				25174F65234F1D24000FB4BF /* PTLiveBroadcast */,
+				25174F71234F1D24000FB4BF /* PTLiveBroadcastSetupUI */,
 				253EF3BE22EAC8DE00821F97 /* Products */,
+				2816E75A07C8BDDCC6493CAA /* Pods */,
+				4A5CFCE43146D864A723C1D6 /* Frameworks */,
+				25174F48234EFB24000FB4BF /* Development-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +171,9 @@
 			isa = PBXGroup;
 			children = (
 				253EF3BD22EAC8DE00821F97 /* Donpo.app */,
+				25174F47234EFB23000FB4BF /* Development.app */,
+				25174F63234F1D24000FB4BF /* PTLiveBroadcast.appex */,
+				25174F6E234F1D24000FB4BF /* PTLiveBroadcastSetupUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,6 +181,8 @@
 		253EF3BF22EAC8DE00821F97 /* Donpo */ = {
 			isa = PBXGroup;
 			children = (
+				25A20BA022FE689D0025B5B2 /* Prototype */,
+				25F61DB222EC431400A2C8E1 /* Donpo.entitlements */,
 				253EF3C022EAC8DE00821F97 /* AppDelegate.h */,
 				253EF3C122EAC8DE00821F97 /* AppDelegate.m */,
 				253EF3C322EAC8DE00821F97 /* MasterViewController.h */,
@@ -76,13 +198,94 @@
 			path = Donpo;
 			sourceTree = "<group>";
 		};
+		25A20BA022FE689D0025B5B2 /* Prototype */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Prototype;
+			sourceTree = "<group>";
+		};
+		2816E75A07C8BDDCC6493CAA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7703D1FE8AD8B9F20F6681AC /* Pods-Donpo.debug.xcconfig */,
+				F124629E1007F4FD1AEB47D1 /* Pods-Donpo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4A5CFCE43146D864A723C1D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A8565186D3C87FB2AD3C0C4 /* libPods-Donpo.a */,
+				25174F4F234F1BBF000FB4BF /* ReplayKit.framework */,
+				25174F51234F1BBF000FB4BF /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		25174F37234EFB23000FB4BF /* Development */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25174F44234EFB23000FB4BF /* Build configuration list for PBXNativeTarget "Development" */;
+			buildPhases = (
+				25174F39234EFB23000FB4BF /* Sources */,
+				25174F3E234EFB23000FB4BF /* Frameworks */,
+				25174F40234EFB23000FB4BF /* Resources */,
+				25174F5E234F1BC0000FB4BF /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				25174F77234F1D24000FB4BF /* PBXTargetDependency */,
+				25174F7A234F1D24000FB4BF /* PBXTargetDependency */,
+			);
+			name = Development;
+			productName = Donpo;
+			productReference = 25174F47234EFB23000FB4BF /* Development.app */;
+			productType = "com.apple.product-type.application";
+		};
+		25174F62234F1D24000FB4BF /* PTLiveBroadcast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25174F7F234F1D24000FB4BF /* Build configuration list for PBXNativeTarget "PTLiveBroadcast" */;
+			buildPhases = (
+				25174F5F234F1D24000FB4BF /* Sources */,
+				25174F60234F1D24000FB4BF /* Frameworks */,
+				25174F61234F1D24000FB4BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PTLiveBroadcast;
+			productName = PTLiveBroadcast;
+			productReference = 25174F63234F1D24000FB4BF /* PTLiveBroadcast.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		25174F6D234F1D24000FB4BF /* PTLiveBroadcastSetupUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25174F7C234F1D24000FB4BF /* Build configuration list for PBXNativeTarget "PTLiveBroadcastSetupUI" */;
+			buildPhases = (
+				25174F6A234F1D24000FB4BF /* Sources */,
+				25174F6B234F1D24000FB4BF /* Frameworks */,
+				25174F6C234F1D24000FB4BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PTLiveBroadcastSetupUI;
+			productName = PTLiveBroadcastSetupUI;
+			productReference = 25174F6E234F1D24000FB4BF /* PTLiveBroadcastSetupUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		253EF3BC22EAC8DE00821F97 /* Donpo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 253EF3D622EAC8DF00821F97 /* Build configuration list for PBXNativeTarget "Donpo" */;
 			buildPhases = (
+				4A225DC749F29B4674FD68EB /* [CP] Check Pods Manifest.lock */,
 				253EF3B922EAC8DE00821F97 /* Sources */,
 				253EF3BA22EAC8DE00821F97 /* Frameworks */,
 				253EF3BB22EAC8DE00821F97 /* Resources */,
@@ -102,11 +305,30 @@
 		253EF3B522EAC8DE00821F97 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = PT;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = benco;
 				TargetAttributes = {
+					25174F37234EFB23000FB4BF = {
+					};
+					25174F62234F1D24000FB4BF = {
+						CreatedOnToolsVersion = 11.0;
+						DevelopmentTeam = 439YZJF3M5;
+						ProvisioningStyle = Manual;
+					};
+					25174F6D234F1D24000FB4BF = {
+						CreatedOnToolsVersion = 11.0;
+						DevelopmentTeam = 439YZJF3M5;
+						ProvisioningStyle = Manual;
+					};
 					253EF3BC22EAC8DE00821F97 = {
 						CreatedOnToolsVersion = 10.3;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -124,11 +346,38 @@
 			projectRoot = "";
 			targets = (
 				253EF3BC22EAC8DE00821F97 /* Donpo */,
+				25174F37234EFB23000FB4BF /* Development */,
+				25174F62234F1D24000FB4BF /* PTLiveBroadcast */,
+				25174F6D234F1D24000FB4BF /* PTLiveBroadcastSetupUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		25174F40234EFB23000FB4BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25174F41234EFB23000FB4BF /* LaunchScreen.storyboard in Resources */,
+				25174F42234EFB23000FB4BF /* Assets.xcassets in Resources */,
+				25174F43234EFB23000FB4BF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25174F61234F1D24000FB4BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25174F6C234F1D24000FB4BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		253EF3BB22EAC8DE00821F97 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -141,7 +390,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4A225DC749F29B4674FD68EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Donpo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		25174F39234EFB23000FB4BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25174F3A234EFB23000FB4BF /* MasterViewController.m in Sources */,
+				25174F3B234EFB23000FB4BF /* AppDelegate.m in Sources */,
+				25174F3C234EFB23000FB4BF /* main.m in Sources */,
+				25174F3D234EFB23000FB4BF /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25174F5F234F1D24000FB4BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25174F68234F1D24000FB4BF /* SampleHandler.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25174F6A234F1D24000FB4BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25174F74234F1D24000FB4BF /* BroadcastSetupViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		253EF3B922EAC8DE00821F97 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -154,6 +455,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		25174F77234F1D24000FB4BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 25174F6D234F1D24000FB4BF /* PTLiveBroadcastSetupUI */;
+			targetProxy = 25174F76234F1D24000FB4BF /* PBXContainerItemProxy */;
+		};
+		25174F7A234F1D24000FB4BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 25174F62234F1D24000FB4BF /* PTLiveBroadcast */;
+			targetProxy = 25174F79234F1D24000FB4BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		253EF3C922EAC8DE00821F97 /* Main.storyboard */ = {
@@ -175,6 +489,139 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		25174F45234EFB23000FB4BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Development.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 61;
+				DEVELOPMENT_TEAM = 439YZJF3M5;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"per_mdb_id=3151",
+				);
+				INFOPLIST_FILE = "Development-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.benco.develop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.benco.develop";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		25174F46234EFB23000FB4BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Development.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 61;
+				DEVELOPMENT_TEAM = 439YZJF3M5;
+				INFOPLIST_FILE = "Development-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.benco.develop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.benco.develop";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		25174F7D234F1D24000FB4BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 439YZJF3M5;
+				INFOPLIST_FILE = PTLiveBroadcastSetupUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.benco.develop.PTLiveBroadcastSetupUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.benco.develop.PTLiveBroadcastSetupUI";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		25174F7E234F1D24000FB4BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 439YZJF3M5;
+				INFOPLIST_FILE = PTLiveBroadcastSetupUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.benco.develop.PTLiveBroadcastSetupUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.benco.develop.PTLiveBroadcastSetupUI";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		25174F80234F1D24000FB4BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 439YZJF3M5;
+				INFOPLIST_FILE = PTLiveBroadcast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.benco.develop.PTLiveBroadcast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.benco.develop.PTLiveBroadcast";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		25174F81234F1D24000FB4BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 439YZJF3M5;
+				INFOPLIST_FILE = PTLiveBroadcast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.benco.develop.PTLiveBroadcast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.benco.develop.PTLiveBroadcast";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		253EF3D422EAC8DF00821F97 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -289,41 +736,78 @@
 		};
 		253EF3D722EAC8DF00821F97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7703D1FE8AD8B9F20F6681AC /* Pods-Donpo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 61;
 				DEVELOPMENT_TEAM = 439YZJF3M5;
 				INFOPLIST_FILE = Donpo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.benco.develop.Donpo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.benco.develop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.benco.develop";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		253EF3D822EAC8DF00821F97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F124629E1007F4FD1AEB47D1 /* Pods-Donpo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 61;
 				DEVELOPMENT_TEAM = 439YZJF3M5;
 				INFOPLIST_FILE = Donpo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.benco.develop.Donpo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.benco.develop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.benco.develop";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		25174F44234EFB23000FB4BF /* Build configuration list for PBXNativeTarget "Development" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25174F45234EFB23000FB4BF /* Debug */,
+				25174F46234EFB23000FB4BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25174F7C234F1D24000FB4BF /* Build configuration list for PBXNativeTarget "PTLiveBroadcastSetupUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25174F7D234F1D24000FB4BF /* Debug */,
+				25174F7E234F1D24000FB4BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25174F7F234F1D24000FB4BF /* Build configuration list for PBXNativeTarget "PTLiveBroadcast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25174F80234F1D24000FB4BF /* Debug */,
+				25174F81234F1D24000FB4BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		253EF3B822EAC8DE00821F97 /* Build configuration list for PBXProject "Donpo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
