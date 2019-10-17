@@ -1,0 +1,319 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Description of what the lane does"
+  
+  lane :beta do |options|
+
+    value = options[:value]
+
+    if !options[:value]
+      UI.important "benwnsaf : #{value}"
+    end
+
+    username = ENV['MATCH_USERNAME']
+    UI.important "benwnsaf : #{username}"
+
+  info_path = "./../build/"
+  git_commit(
+    message: "fastlane commit Build/Info.plist",
+    path: ["#{info_path}"]
+  )
+
+
+
+
+  end
+
+  ###############
+  # 上传蒲公英
+  # 用法1：fastlane upload path:[IPA路径]
+  # 用法2：fastlane upload
+  # 默认目录路径 ./build, 需输入IPA文件名
+  ###############
+  lane :upload do |options|
+
+    UI.header "Upload Pgy"
+
+    ipa_output_path = options[:path] 
+
+    if ipa_output_path
+      sh "./pub_pgy.sh #{ipa_output_path}"
+    else
+      
+      # 默认IPA所在目录："./build"
+      ipa_output_directory = ENV["IPA_OUTPUT_PATH"] ? ENV["IPA_OUTPUT_PATH"] : "./build" 
+
+      # IPA名称，默认为target名称
+      target = ENV["TARGET_NAME"]
+
+      # 检测无名称，输入名称
+      if target == nil
+        target = UI.input("Please enter the name of ipa:")
+      end
+
+      ipa_output_path = "./../#{ipa_output_directory}/#{target}.ipa"
+
+      # sh "./pub_pgy.sh ./../#{scheme}.ipa"
+      # 执行上传脚本
+      sh "./pub_pgy.sh #{ipa_output_path}"
+    end
+  end
+
+  lane :development do |options|
+
+    # 项目名称
+    ENV["PROJECT_NAME"] = "Donpo"
+
+    # 目标名称
+    ENV["TARGET_NAME"] = "Development"
+
+    # Plist文件名称
+    ENV["PLIST_INFO_NAME"] = "Development-Info"
+
+    # 支持设备类型
+    ENV['DEVICE'] = 'Universal'
+
+    # 团队账号
+    ENV["FASTLANE_TEAM_ID"] = "439YZJF3M5"
+
+    # 应用标识
+    ENV["APP_IDENTIFIER"] = "com.benco.develop"
+
+    # IPA导出路径
+    ENV["IPA_OUTPUT_PATH"] = "./build"
+    
+    # 拓展应用
+    produce_app_extension()
+
+    # 打包应用
+    release_main_app(options)
+  end
+end
+
+###############
+# 配置拓展应用
+# 需要参数：project, bundle_id, team_id, device
+###############
+def produce_app_extension()
+
+  # 工程名
+  project = ENV["PROJECT_NAME"]
+
+  # 应用标识
+  app_identifier = ENV["APP_IDENTIFIER"]
+
+  # 支持设备类型
+  device = ENV['DEVICE']
+
+  # 证书团队编号
+  team_id = ENV["FASTLANE_TEAM_ID"]
+
+  # 修改拓展应用配置信息
+  ['PTLiveBroadcast', 'PTLiveBroadcastSetupUI'].each do |i|
+
+    # 修改显示名称
+    set_info_plist_value(
+      path: "./#{i}/Info.plist", 
+      key: "CFBundleDisplayName", 
+      value: '门店宝'
+    )
+    
+    # 配置自动签名证书
+    automatic_code_signing(
+      path: "#{project}.xcodeproj",
+      use_automatic_signing: false,
+      targets: i,
+      team_id: team_id
+    )
+
+    # 设置拓展应用标识
+    ex_configs = {"PRODUCT_BUNDLE_IDENTIFIER" => "#{app_identifier}.#{i}"}
+    
+    # 设置设备类型
+    if device == "Universal"
+      ex_configs["TARGETED_DEVICE_FAMILY"] = "1,2"
+    elsif device == "iPad"
+      ex_configs["TARGETED_DEVICE_FAMILY"] = "2"
+    elsif device == "iPhone"
+      ex_configs["TARGETED_DEVICE_FAMILY"] = "1"
+    end
+
+    # 配置Target
+    set_build_setting(
+      xcodeproj: "#{project}.xcodeproj", 
+      target_name: i,
+      configs: ex_configs
+    )
+  end
+
+  #打包拓展应用
+  produce(
+    app_identifier: "#{app_identifier}.PTLiveBroadcastSetupUI",
+    app_name: "#{app_identifier} PTLiveBroadcastSetupUI",
+    skip_itc: true,
+    skip_devcenter: true
+  )
+  produce(
+    app_identifier: "#{app_identifier}.PTLiveBroadcast",
+    app_name: "#{app_identifier} PTLiveBroadcast",
+    skip_itc: true,
+    skip_devcenter: true
+  )
+
+  # # 收集所有应用标识
+  # app_identifiers = [
+  #   "#{app_identifier}",
+  #   "#{app_identifier}.PTLiveBroadcastSetupUI",
+  #   "#{app_identifier}.PTLiveBroadcast"
+  # ]
+  # ENV["APP_IDENTIFIER_LIST"] = "#{app_identifiers.join(',')}"
+end
+
+###############
+# 发布应用
+# 需要参数：project, bundle_id, team_id, device
+###############
+def release_main_app(options)
+
+  ###############
+  # 修改应用配置
+  # 需要参数：plist
+  ###############
+
+  # Plist文件名称
+  plist = ENV["PLIST_INFO_NAME"]
+  # Plist文件路径
+  info_path = "./#{plist}.plist"
+
+  # 频道设置，默认为'ENT'
+  channel = options[:channel] ? options[:channel] : "ENT"
+  # 环境设置，默认为'Pro'
+  environment = options[:env] ? options[:env] : "Pro"
+
+  # 向Plist写入键值对
+  channel = set_info_plist_value(
+    path: info_path, 
+    key: "kUMAppChannelKey", 
+    value: channel
+  )
+  environment = set_info_plist_value(
+    path: info_path, 
+    key: "kEnvironmentKey", 
+    value: environment
+  )
+
+  # 配置Version版本号
+  if options[:version]
+    set_info_plist_value(
+      path: info_path, 
+      key: "CFBundleShortVersionString", 
+      value: version
+    )
+    UI.important "Update CFBundleShortVersionString:#{version}"
+  end
+
+  ###############
+  # 打包应用
+  # 需要参数：target, IPA导出路径
+  ###############
+
+  target = ENV["TARGET_NAME"]
+
+  # 匹配证书
+  match(
+    type: "adhoc", 
+    # git_branch: "en", 
+    clone_branch_directly: true
+  )
+
+  # IPA导出路径
+  ipa_output_directory = ENV["IPA_OUTPUT_PATH"] ? ENV["IPA_OUTPUT_PATH"] : "./build"
+
+  # 打出IPA包
+  gym(
+    scheme: target,
+    configuration: "Release",
+    output_directory: ipa_output_directory,
+    silent: true,
+    clean: true,
+    export_xcargs: "-allowProvisioningUpdates"
+  )
+
+  ###############
+  # 上传到蒲公英
+  # 需要参数：target, IPA导出路径
+  ###############
+
+  # sh "./pub_pgy.sh ./../#{scheme}.ipa"
+
+  ipa_output_path = "./../#{ipa_output_directory}/#{target}.ipa"
+
+  sh "./pub_pgy.sh #{ipa_output_path}"
+
+  ###############
+  # 提交Git信息
+  # 需要参数：Plist路径
+  ###############
+
+  # version
+  version = get_info_plist_value(
+    path: info_path, 
+    key: "CFBundleShortVersionString"
+  )
+
+  # build
+  build = get_info_plist_value(
+    path: info_path, 
+    key: "CFBundleVersion"
+  )
+
+  channel = get_info_plist_value(
+    path: info_path, 
+    key: "kUMAppChannelKey", 
+  )
+  environment = get_info_plist_value(
+    path: info_path, 
+    key: "kEnvironmentKey", 
+  )
+
+  tag = "#{target}_#{version}_#{build}_#{channel}_#{environment}"
+
+  git_commit(
+    message: "fastlane commit #{tag}",
+    path: ["#{info_path}"]
+  )
+  # 添加Tag标记
+  add_git_tag(tag: tag)
+
+  # 推送Tag标记
+  push_git_tags
+  # 推送到远端
+  push_to_git_remote
+end
+
+
+
+
+
+
+
+
+
+
