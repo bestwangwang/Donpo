@@ -30,11 +30,12 @@ platform :ios do
     username = ENV['MATCH_USERNAME']
     UI.important "benwnsaf : #{username}"
 
-  info_path = "./../build/"
+  info_path = "./../Test/ImagesCustom.xcassets/"
   git_commit(
     message: "fastlane commit Build/Info.plist",
     path: ["#{info_path}"]
   )
+
 
 
 
